@@ -4,24 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Borel&family=Lavishly+Yours&family=Meow+Script&family=Nova+Square&family=Oswald:wght@200..700&family=Quintessential&family=Rationale&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Citations</title>
 </head>
 <body>
     <h1>Mes citations</h1>
     <h2>Gestionnaire de citations en ligne</h2>
-    <h3 id="count">0 citations</h3>
+    <h3 id="count">1 citation(s)</h3>
     <hr>
 
     <form id="form">
-        <label for="quote-entry">Saisir la citation : 
-            <input type="text" id="quote-entry" name="quote-entry" />
-        </label>
+        <div> 
+            <label for="quote-entry">Saisir la citation : 
+                <input type="text" id="quote-entry" name="quote-entry" />
+            </label>
+        </div>
+
         <br>
-        <label for="author-name">Nom auteur/autrice : 
-            <input type="text" id="author-name" name="author-name" />
-        </label>
+        
+        <div>
+            <label for="author-name">Nom auteur/autrice : 
+                <input type="text" id="author-name" name="author-name" />
+            </label>
+        </div>
+
         <br>
-        <button type='button' id="btn-submit">Soumettre la citation</button>
+
+        <div>
+            <button type='button' id="btn-submit">Soumettre la citation</button>
+        </div>
+
     </form>
 
     <div id="quote-list">

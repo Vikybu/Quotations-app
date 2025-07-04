@@ -1,0 +1,57 @@
+body {
+    background-color: #feecc8;
+}
+
+h1 {
+    font-family: "Lavishly Yours", cursive;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h2 {
+    font-family: "Quintessential", serif;
+    text-align: center;
+    margin-top: 0px;
+    font-size: 20px;
+}
+
+h3 {
+    font-family: "Quintessential", serif;
+    text-align: center;
+    margin-top: 0px;
+    font-size: 18px;
+}
+
+form {
+    text-align: center;
+    font-family: "Quintessential", serif;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn-submit {
+    font-family: "Quintessential", serif;
+}
+
+.text {
+    font-family: "Quintessential", serif;
+    font-weight: 600;
+    margin-top: 0px;
+    font-size: 17px;
+    margin-bottom: 0px;
+}
+
+.author {
+    font-family: "Quintessential", serif;
+    font-weight: 600;
+    margin-top: 0px;
+    font-size: 14px;
+
+}
+
+input {
+height: 20px;
+width: 700px;
+}
