@@ -1,15 +1,25 @@
 const btnSubmit = document.getElementById('btn-submit')
-let quoteEntry = document.getElementById('quote-entry')
-let authorName = document.getElementById('author-name')
-let text = ''
-let author = ''
+const divQuoteList = document.getElementById('quote-list')
+ 
 
-btnSubmit.addEventListener('click', quoteAuthorRetrieve)
+btnSubmit.addEventListener('click', addQuote)
 
+// Ajout de la citation et de l'auteur 
+function addQuote(quote, author){
+    const quoteP = document.createElement('p')
+    quoteP.className = 'text'
+    quoteP.innerText = document.getElementById('quote-entry').value 
+    console.log(quote)
 
-function quoteAuthorRetrieve(){
-    text = quoteEntry.value 
-    author = authorName.value 
-    console.log(text, author)
-    console.log('OK')
+    const authorP = document.createElement('p')
+    authorP.className = 'text'
+    authorP.innerText = document.getElementById('author-name').value 
+    console.log(author)
+
+    const divQuote = document.createElement('div')
+    divQuote.className = 'quote'
+
+    divQuote.appendChild(quoteP)
+    divQuote.appendChild(authorP)
+    divQuoteList.appendChild(divQuote)
 }
