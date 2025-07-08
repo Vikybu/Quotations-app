@@ -13,17 +13,18 @@ if(localStorage.getItem('quotes') == null){
 addQuote()
 quoteTotalCount()
 
-btnSubmit.addEventListener('click',
-    quoteStorage,
-    addQuote,
-    quoteTotalCount
-)
+btnSubmit.addEventListener('click', () => {
+    quoteStorage()
+    addQuote()
+    quoteTotalCount()
+})
 
 // Ajout de la citation et de l'auteur dans le localStorage
 function quoteStorage() {
     const text = inputQuote.value
     const author = inputAuthor.value
     const allQuotes = localStorage.getItem('quotes')
+
     if (allQuotes === ''){
         localStorage.setItem('quotes', JSON.stringify([{"author" : author, "text" : text}]))
     } else {
@@ -37,7 +38,12 @@ function quoteStorage() {
 // Affiche les auteurs + citations stockés dans le localStorage
 function addQuote() {
     const allQuotes = localStorage.getItem('quotes')
-    let allQuotesList = JSON.parse(allQuotes)
+    let allQuotesList = ''
+    if (allQuotes == '') {
+        allQuotesList = []
+    } else {
+        allQuotesList = JSON.parse(allQuotes)
+    }
 
     allQuotesList.forEach(element => {
         const quoteP = document.createElement('p')
@@ -63,7 +69,12 @@ function addQuote() {
 //Permet de compter le nombre de citations enregistrées
 function quoteTotalCount(){
     const allQuotes = localStorage.getItem('quotes')
-    let allQuotesList = JSON.parse(allQuotes)
+        let allQuotesList = ''
+    if (allQuotes == '') {
+        allQuotesList = []
+    } else {
+        allQuotesList = JSON.parse(allQuotes)
+    }
 
     totalCount = allQuotesList.length + quoteCount
     count.innerText = `${totalCount} citation(s)`
